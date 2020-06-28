@@ -11,4 +11,8 @@ using System.Runtime.InteropServices;
 
 [assembly: Guid("04D4E761-F756-43D8-B31C-79B1B0671243")]
 
+#if DEBUG
 [assembly: InternalsVisibleTo("MsgPack.Light.Tests")]
+#else
+[assembly: InternalsVisibleTo("MsgPack.Light.Tests, PublicKeyToken=67009b043c436677")]
+#endif
